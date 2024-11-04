@@ -36,6 +36,10 @@ export default defineConfig({
       },
     },
   },
+  ssr: {
+    noExternal: ['{design system library}', /@tamagui/],
+    external: ['react-native-web'],
+  },
   plugins: [
     remix({
       future: {
